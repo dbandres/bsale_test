@@ -1,6 +1,6 @@
-import { pool } from "../../db/dbconexion.js";
+import {pool}  from "../../db/dbconexion.js";
 
-export const getRoute = async (req, res) =>{
+export const getRouteById = async (req, res) =>{
     try {
         const [resultado] = await pool.query("SELECT * FROM product WHERE id = ?", [req.params.id])
         
@@ -13,3 +13,12 @@ export const getRoute = async (req, res) =>{
         console.log(error)
     }
 }
+
+export const getProductOrder = async (req, res)=>{
+    const [resul] = await pool.query("SELECT * FROM category")
+    res.send(resul)
+
+    const [resultado] = await pool.query("SELECT * FROM product WHERE name LIKE '%energetica%'")
+    console.log("bebida: ", resultado)
+}
+

@@ -6,11 +6,11 @@ const previous = document.querySelector("#previous")
 const next = document.querySelector("#next")
 
 let offset = 1;
-let limit = 8;
+let limit = 4;
 
 previous.addEventListener("click", ()=>{
     if( offset != 1){
-        offset -= 9;
+        offset -= 8;
         removeChilNode(productContainer)
         fetchProductos(offset, limit)
     }
