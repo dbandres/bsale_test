@@ -1,11 +1,14 @@
 import { Router } from "express";
-import { getRouteById, getProductOrder } from "../controllers/controllers.js";
-import { getSearch } from "../search/search.js";
+import { getAllProducts, getProductoByName, getCategory } from "../controllers/controllers.js";
+
 
 const route = Router();
 
-route.get("/:id", getRouteById);
-route.get("/", getProductOrder);
+route.get("/", getAllProducts);
+route.get("/product", getProductoByName)
+route.get("/category", getCategory)
+
+
 
 
 

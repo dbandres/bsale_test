@@ -16,18 +16,45 @@
         <h1 class="title_nav">
             BsalE test
         </h1>
-        <div id="spiner" class="spiner spinner-border text-warning" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-        <input type="search">
+       <form action="" id="formInput">
+        <input type="search"
+        id="input"
+        placeholder="Buscar por nombre completo">
+        <input type="submit" value="Buscar" id="submit">
+       </form>
     </div>
-    <nav class="pagination">
-        <ul class="pagination">
-          <li id="previous" class="page-item"><a class="page-link" href="#">Anterior</a></li>
-          
-          <li id="next" class="page-item"><a class="page-link" href="#">Siguiente</a></li>
-        </ul>
-      </nav>
+    <form action="" class="form">
+        <p>
+            <input type="checkbox" id="chec">
+            <label for="">Bebida Energetica</label>
+        </p>
+        <p>
+            <input type="checkbox" id="checP">
+            <label for="">Pisco</label>
+        </p>
+        <p>
+            <input type="checkbox" id="checR">
+            <label for="">Ron</label>
+        </p>
+        <p>
+            <input type="checkbox" id="checB">
+            <label for="">Bebida</label>
+        </p>
+        <p>
+            <input type="checkbox" id="checS">
+            <label for="">Snack</label>
+        </p>
+        <p>
+            <input type="checkbox" id="checCer">
+            <label for="">Cerveza</label>
+        </p>
+        <p>
+            <input type="checkbox" id="checVod">
+            <label for="">Vodka</label>
+        </p>
+    </form>
+    <button value="energetica" id="allProducts">Mostrar todos los productos</button>
+    
 </body>
-<script src="index.js" defer></script>
+<script type="module" src="index2.js" defer></script>
 </html>

@@ -1,8 +1,10 @@
 import { createPool } from "mysql2/promise";
 
+
 export const pool = createPool({
-    connectTimeout: 100000000,
-    connectionLimit: 100,
+    connectTimeout: 1000,
+    connectionLimit: 1000,
+    debug: false,
     host: "mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com",
     port:"3306",
     user: "bsale_test",
@@ -19,5 +21,4 @@ pool.on("enqueue", function(){
 })
 
 console.log(pool)
-
 
